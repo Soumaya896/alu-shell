@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -name "*.gif" | rev | cut -d'.' -f2- | rev | cut -d'/' -f2- | sort -fi
+find . -type f -name "*.gif" | while read f; do basename "${f}" .gif; done | sort -fi
